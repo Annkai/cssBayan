@@ -130,6 +130,10 @@
     font-size: 1.25rem;
   }
 
+  .main__icon {
+    display: block;
+  }
+
   .main__title {
     font-size: 1.8rem;
   }
