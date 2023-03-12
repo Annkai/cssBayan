@@ -3,78 +3,13 @@
   }
 
   body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
     font-size: 22px;
     font-weight: 700;
-    background: #f9faf8;;
   }
 
-  .header,
-  .footer {
-    height: 100px;
+  h1 {
+    font-weight: 900;
   }
-
-  .container {
-    margin: 0 auto;
-    padding: 45px 70px 0 120px;
-    max-width: 830px;
-    height: 716px;
-    background: #f6f6ed;
-    transition: 0.8s;
-  }
-
-  .container:hover {
-    cursor: pointer;
-  }
-
-  .wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #d7dad5;
-    color: #1e58aa;
-  }
-
-  .container:hover .wrapper { 
-    color: #000000;
-   }
-
-   .container:hover .icon-container { 
-    display: block;
-   }
-
-   input[type="radio"] {
-    position: absolute;
-    visibility: hidden;
-  }
-
-  .icon-container {
-    display: none;
-    margin-left: auto;
-    width: 20px;
-    height: 20px;
-    background-image: url(./assets/icons/add.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-
-  .copy {
-    border-top: 2px solid #d7dad5;
-  }
-
-  .copy__input:checked + .copy__label {
-    color: #000000;
-  }
-
-  /* .copy__input:checked + .copy__icon-container {
-    background-image: url(./assets/icons/del.png);
-  } */
-
-  
