@@ -16,20 +16,15 @@
     margin: 0 auto;
     padding: 45px 70px 0 120px;
     background: #f6f6ed;
+    color: #1e58aa;
     transition: 0.8s;
-  }
-
-  .container:hover,
-  .main__label:hover,
-  .main__img:hover {
-    cursor: pointer;
-    background: #dbeaeb;
   }
 
   .main__title {
     margin: 0;
     padding: 0;
     font-weight: 900;
+    color: #000000;
   }
 
   .main__list {
@@ -41,7 +36,7 @@
     margin-left: -35px;
     width: 100%;
     list-style: none;
-    border: 1px solid pink;
+    border-top: 2px solid rgb(156, 151, 152);
 }
 
 .main__input {
@@ -53,13 +48,107 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
   cursor: pointer;
 }
 
-.main__img {
+.main__icon {
   display: none;
+  width: 6%;
+  transition: 0.8s;
 }
 
 .main__input:checked + .main__label {
-  color: #1e58aa;
+  color: #000000;
 }
+
+.main__input:checked + label img{
+  transform: rotate(45deg);
+}
+
+.main__img-container {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.8s;
+}
+
+.main__img {
+  padding-bottom: 30px;
+}
+
+.main__input:checked ~ .main__img-container {
+  max-height: 400px;
+}
+
+.main__img-container img {
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  max-height: 400px;
+  transition: 0.8s;
+}
+
+.main__input:checked ~ .main__img-container img {
+  width: 60%;
+}
+
+/* Media */
+
+@media (min-width: 821px) {
+
+  .container:hover,
+  .main__label:hover,
+  .main__img:hover {
+    cursor: pointer;
+  }
+
+  .container:hover {
+    background: #dbeaeb;
+    color: #000000;
+  }
+
+  .main__list:hover .main__icon {
+    display: block;
+  }
+
+  li:hover label img{
+    transform: rotate(90deg)
+  }
+  
+  li:hover .main__img-container {
+    max-height: 400px;
+  }
+  
+  li:hover .main__img-container img{
+    width: 60%;
+  }
+}
+
+@media (max-width: 820px) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  .main__title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 568px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .main__title {
+    font-size: 1.3rem;
+  }
+}
+
+
+
